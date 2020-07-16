@@ -1,5 +1,4 @@
-﻿using ApiWeb;
-using ApiWeb.Controllers;
+﻿using ApiWeb.Controllers;
 using ApiWeb.Models;
 using ApiWeb.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -11,17 +10,19 @@ using Xunit;
 
 namespace ApiTest
 {
-    public class ListarUsuarioControllerTest
+    // USANDO XUNIT PARA TESTES DE UNIDADE DE USUARIO
+   public class TesteUnidadeUsuario
     {
+
         UsuarioFakeController usuariosController;
         IUsuarioServiceFake usuarioServiceFake;
 
-        public ListarUsuarioControllerTest()
+        public TesteUnidadeUsuario()
         {
+
             usuarioServiceFake = new UsuarioServiceFake();
             usuariosController = new UsuarioFakeController(usuarioServiceFake);
         }
-
 
 
         // Métodos de Get e Post para confirmar se o stutas da requisição é o esperado
@@ -47,6 +48,5 @@ namespace ApiTest
             var createResponse = await usuariosController.CriarUsuarioFake(testeCreate);
             Assert.IsType<CreatedAtActionResult>(createResponse.Result);
         }
-
     }
 }

@@ -32,20 +32,21 @@ namespace ApiWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<UsuarioContext>(options =>
-            //options.UseMySql(Configuration.GetConnectionString("UsuarioContext"), builder =>
-            //builder.MigrationsAssembly("ApiWeb")));
+            services.AddDbContext<UsuarioContext>(options =>
+            options.UseMySql(Configuration.GetConnectionString("UsuarioContext"), builder =>
+            builder.MigrationsAssembly("ApiWeb")));
 
-            
+
             // service para salvar o context em memoria
             services.AddDbContext<UsuarioContext>(opt => opt.UseInMemoryDatabase("UsuarioList"));
 
-
+            // importando jsonSoft
             services.AddControllers().AddNewtonsoftJson();
-           
-            
-            services.AddScoped<UsuarioServiceFake>();
+                 
+                      
             services.AddScoped<IUsuarioService, UsuarioService>();
+            // importar os serviços de testes de unidade e integração
+            services.AddScoped<IUsuarioServiceFake, UsuarioServiceFake>();
 
 
             
