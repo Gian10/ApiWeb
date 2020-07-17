@@ -17,7 +17,7 @@ namespace ApiWeb
 
         public DbSet<Usuario> Usuarios { get ; set ;}
 
-        public DbSet<Cartao> Cartao { get; set; }
+        public DbSet<CartaoModel> Cartao { get; set; }
 
     }
 }

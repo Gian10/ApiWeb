@@ -22,4 +22,8 @@
     <ProjectReference Include="..\ApiWeb\ApiWeb.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CartaoTeste\" />
+  </ItemGroup>
+
 </Project>

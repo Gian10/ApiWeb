@@ -17,6 +17,7 @@ using Microsoft.OpenApi.Models;
 using ApiWeb.Services;
 using ApiWeb.Controllers;
 using Microsoft.AspNetCore.Http;
+using ApiWeb.Services.Cartao;
 
 namespace ApiWeb
 {
@@ -48,7 +49,8 @@ namespace ApiWeb
             // importar os serviços de testes de unidade e integração
             services.AddScoped<IUsuarioServiceFake, UsuarioServiceFake>();
 
-
+            // injetar CartaoService
+            services.AddScoped<CartaoService>();
             
 
             // baixar o  Swashbuckle.AspNetCore para usar o swagger

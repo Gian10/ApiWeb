@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ApiWeb.Migrations
 {
-    public partial class Initial : Migration
+    public partial class UpgradeUsuarioCartao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +27,7 @@ namespace ApiWeb.Migrations
                 {
                     CartaoId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NumCartao = table.Column<string>(nullable: true),
+                    NumeroCartao = table.Column<string>(nullable: true),
                     NomeCartao = table.Column<string>(nullable: true),
                     ValidadeCartao = table.Column<string>(nullable: true),
                     CVVCartao = table.Column<string>(nullable: true),

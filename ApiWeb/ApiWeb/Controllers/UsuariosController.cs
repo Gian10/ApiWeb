@@ -19,6 +19,10 @@ namespace ApiWeb.Controllers
         
         private readonly IUsuarioService _iUsuarioService;
 
+        public UsuariosController(IUsuarioService usuarioService)
+        {
+            _iUsuarioService = usuarioService;
+        }
 
         [HttpGet]
         public async Task<ActionResult<List<Usuario>>> GetUsuarios()

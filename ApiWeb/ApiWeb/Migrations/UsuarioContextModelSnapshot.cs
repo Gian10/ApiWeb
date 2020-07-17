@@ -16,7 +16,7 @@ namespace ApiWeb.Migrations
                 .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("ApiWeb.Models.Cartao", b =>
+            modelBuilder.Entity("ApiWeb.Models.CartaoModel", b =>
                 {
                     b.Property<int>("CartaoId")
                         .ValueGeneratedOnAdd()
@@ -28,7 +28,7 @@ namespace ApiWeb.Migrations
                     b.Property<string>("NomeCartao")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("NumCartao")
+                    b.Property<string>("NumeroCartao")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("UsuarioId")
@@ -61,7 +61,7 @@ namespace ApiWeb.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("ApiWeb.Models.Cartao", b =>
+            modelBuilder.Entity("ApiWeb.Models.CartaoModel", b =>
                 {
                     b.HasOne("ApiWeb.Models.Usuario", "Usuario")
                         .WithMany()
