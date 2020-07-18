@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ApiWeb.Services
 {
+    // INTERFACE FAKE
     public interface IUsuarioServiceFake
     {
 
         Task<List<Usuario>> ListarUsuarioFake();
 
-        Task<Usuario> CriarUsuario(Usuario usuario);
+        Task<Usuario> CriarUsuarioFake(Usuario usuario);
     }
 }

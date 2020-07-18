@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApiWeb.Services
 {
+    //  CLASSE DE SERVIÇO FAKE PARA REALIZAÇÃO DE TESTES DE UNIDADE E INTEGRAÇÃO
     public class UsuarioServiceFake : IUsuarioServiceFake
     {
         private readonly List<Usuario> usuarios;
@@ -22,7 +23,7 @@ namespace ApiWeb.Services
             };
         }
 
-        public async Task<Usuario> CriarUsuario(Usuario usuario)
+        public async Task<Usuario> CriarUsuarioFake(Usuario usuario)
         {
             usuarios.Add(usuario);
             return usuario;

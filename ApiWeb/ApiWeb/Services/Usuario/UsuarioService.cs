@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApiWeb.Services
 {
+    // CLASSE DE SERVIÇO LIGADO AO BANCO DE DADOS
     public class UsuarioService : IUsuarioService
     {
         public readonly UsuarioContext usuarioContext;

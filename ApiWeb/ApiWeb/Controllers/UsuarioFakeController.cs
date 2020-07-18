@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiWeb.Controllers
 {
-    // CONTROLLER PARA REALIZAÇÃO DE TESTES
+    // CONTROLLER DE USUARIO FAKE PARA REALIZAÇÃO DE TESTES
 
     [Route("api/[controller]")]
     [ApiController]
@@ -36,7 +36,7 @@ namespace ApiWeb.Controllers
         [HttpPost]
         public async Task<ActionResult<Usuario>> CriarUsuarioFake(Usuario usuario)
         {
-            var retorno = await usuarioServiceFake.CriarUsuario(usuario);
+            var retorno = await usuarioServiceFake.CriarUsuarioFake(usuario);
             return CreatedAtAction(nameof(GetUsuariosFake), new { id = retorno.UsuarioId }, retorno);
 
         }

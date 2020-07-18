@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiWeb.Services.Cartao
 {
+    // CLASSE DE SERVIÇO DE CARTÃO LIGADO AO BANCO DE DADOS
     public class CartaoService
     {
 
