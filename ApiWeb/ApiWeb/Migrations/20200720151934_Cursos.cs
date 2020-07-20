@@ -3,10 +3,24 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ApiWeb.Migrations
 {
-    public partial class UpgradeUsuarioCartao : Migration
+    public partial class Cursos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Curso",
+                columns: table => new
+                {
+                    CursoId = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    NomeCurso = table.Column<string>(nullable: true),
+                    ValorCurso = table.Column<double>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Curso", x => x.CursoId);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Usuarios",
                 columns: table => new
@@ -54,6 +68,9 @@ namespace ApiWeb.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Cartao");
+
+            migrationBuilder.DropTable(
+                name: "Curso");
 
             migrationBuilder.DropTable(
                 name: "Usuarios");

@@ -14,10 +14,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.CodeAnalysis.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
-using ApiWeb.Services;
 using ApiWeb.Controllers;
 using Microsoft.AspNetCore.Http;
-using ApiWeb.Services.Cartao;
+using ApiWeb.Services.UsuarioService;
+using ApiWeb.Services.CartaoService;
+using ApiWeb.Services.CursoService;
 
 namespace ApiWeb
 {
@@ -51,6 +52,9 @@ namespace ApiWeb
 
             // injetar CartaoService
             services.AddScoped<CartaoService>();
+
+            // injetar CursoService
+            services.AddScoped<CursoService>();
             
 
             // baixar o  Swashbuckle.AspNetCore para usar o swagger

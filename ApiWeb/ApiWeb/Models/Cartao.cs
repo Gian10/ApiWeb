@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApiWeb.Models
 {
-    public class CartaoModel
+    public class Cartao
     {
         [Key]
         public int CartaoId { get; set; }
@@ -23,7 +23,7 @@ namespace ApiWeb.Models
 
       
 
-        public CartaoModel(int cartaoId, string numeroCartao, string nomeCartao, string validadeCartao, string cVVCartao, int usuarioId)
+        public Cartao(int cartaoId, string numeroCartao, string nomeCartao, string validadeCartao, string cVVCartao, int usuarioId)
         {
             CartaoId = cartaoId;
             NumeroCartao = numeroCartao;

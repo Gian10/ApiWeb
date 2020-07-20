@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiWeb;
 using ApiWeb.Models;
-using ApiWeb.Services.Cartao;
+using ApiWeb.Services.CartaoService;
 
 namespace ApiWeb.Controllers
 {
@@ -26,14 +26,14 @@ namespace ApiWeb.Controllers
 
         // GET: api/Cartaos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CartaoModel>>> GetCartao()
+        public async Task<ActionResult<IEnumerable<Cartao>>> GetCartao()
         {
             return Ok( await _cartaoService.ListarCartao());
         }
 
 
         [HttpPost]
-        public async Task<ActionResult<CartaoModel>> PostCartao(CartaoModel cartao)
+        public async Task<ActionResult<Cartao>> PostCartao(Cartao cartao)
         {
             var objCartao = await _cartaoService.InserirCartao(cartao);
             return CreatedAtAction("GetCartao", new { id = objCartao.CartaoId }, objCartao);

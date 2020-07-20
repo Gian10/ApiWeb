@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using ApiWeb.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiWeb.Services.Cartao
+namespace ApiWeb.Services.CartaoService
 {
     // CLASSE DE SERVIÇO DE CARTÃO LIGADO AO BANCO DE DADOS
     public class CartaoService
@@ -18,13 +18,13 @@ namespace ApiWeb.Services.Cartao
             _context = context;
         }
 
-        public async Task<List<CartaoModel>> ListarCartao()
+        public async Task<List<Cartao>> ListarCartao()
         {
             var listaCartao = _context.Cartao.ToListAsync();
             return await listaCartao;
         }
 
-        public async Task<CartaoModel> InserirCartao(CartaoModel cartaoModel)
+        public async Task<Cartao> InserirCartao(Cartao cartaoModel)
         {
             _context.Add(cartaoModel);
             await _context.SaveChangesAsync();

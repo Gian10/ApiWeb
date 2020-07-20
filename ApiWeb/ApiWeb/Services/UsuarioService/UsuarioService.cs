@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiWeb.Services
+namespace ApiWeb.Services.UsuarioService
 {
     // CLASSE DE SERVIÇO LIGADO AO BANCO DE DADOS
     public class UsuarioService : IUsuarioService

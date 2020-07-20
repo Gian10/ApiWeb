@@ -1,6 +1,6 @@
 ﻿using ApiWeb.Controllers;
 using ApiWeb.Models;
-using ApiWeb.Services;
+using ApiWeb.Services.UsuarioService;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

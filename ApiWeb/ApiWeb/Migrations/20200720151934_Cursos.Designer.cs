@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiWeb.Migrations
 {
     [DbContext(typeof(UsuarioContext))]
-    [Migration("20200717143745_Upgrade Usuario-Cartao")]
-    partial class UpgradeUsuarioCartao
+    [Migration("20200720151934_Cursos")]
+    partial class Cursos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace ApiWeb.Migrations
                 .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("ApiWeb.Models.CartaoModel", b =>
+            modelBuilder.Entity("ApiWeb.Models.Cartao", b =>
                 {
                     b.Property<int>("CartaoId")
                         .ValueGeneratedOnAdd()
@@ -46,6 +46,23 @@ namespace ApiWeb.Migrations
                     b.ToTable("Cartao");
                 });
 
+            modelBuilder.Entity("ApiWeb.Models.Curso", b =>
+                {
+                    b.Property<int>("CursoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeCurso")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<double>("ValorCurso")
+                        .HasColumnType("double");
+
+                    b.HasKey("CursoId");
+
+                    b.ToTable("Curso");
+                });
+
             modelBuilder.Entity("ApiWeb.Models.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
@@ -63,7 +80,7 @@ namespace ApiWeb.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("ApiWeb.Models.CartaoModel", b =>
+            modelBuilder.Entity("ApiWeb.Models.Cartao", b =>
                 {
                     b.HasOne("ApiWeb.Models.Usuario", "Usuario")
                         .WithMany()

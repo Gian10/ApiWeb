@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ApiWeb;
 using ApiWeb.Models;
 using System.Collections;
-using ApiWeb.Services;
+using ApiWeb.Services.UsuarioService;
 
 namespace ApiWeb.Controllers
 {

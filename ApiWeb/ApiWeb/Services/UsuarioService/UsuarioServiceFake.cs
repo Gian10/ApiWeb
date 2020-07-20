@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiWeb.Services
+namespace ApiWeb.Services.UsuarioService
 {
     //  CLASSE DE SERVIÇO FAKE PARA REALIZAÇÃO DE TESTES DE UNIDADE E INTEGRAÇÃO
     public class UsuarioServiceFake : IUsuarioServiceFake
