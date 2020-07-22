@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiWeb.Migrations
 {
     [DbContext(typeof(UsuarioContext))]
-    [Migration("20200720151934_Cursos")]
-    partial class Cursos
+    [Migration("20200722140001_Upgrade")]
+    partial class Upgrade
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,6 +63,38 @@ namespace ApiWeb.Migrations
                     b.ToTable("Curso");
                 });
 
+            modelBuilder.Entity("ApiWeb.Models.MatricularCurso", b =>
+                {
+                    b.Property<int>("MatricularCursoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("CartaoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CursoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QtdPagamentoUsuario")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("ValorTotalCurso")
+                        .HasColumnType("double");
+
+                    b.HasKey("MatricularCursoId");
+
+                    b.HasIndex("CartaoId");
+
+                    b.HasIndex("CursoId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("MatricularCurso");
+                });
+
             modelBuilder.Entity("ApiWeb.Models.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
@@ -82,6 +114,27 @@ namespace ApiWeb.Migrations
 
             modelBuilder.Entity("ApiWeb.Models.Cartao", b =>
                 {
+                    b.HasOne("ApiWeb.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ApiWeb.Models.MatricularCurso", b =>
+                {
+                    b.HasOne("ApiWeb.Models.Cartao", "Cartao")
+                        .WithMany()
+                        .HasForeignKey("CartaoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApiWeb.Models.Curso", "Curso")
+                        .WithMany()
+                        .HasForeignKey("CursoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ApiWeb.Models.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioId")

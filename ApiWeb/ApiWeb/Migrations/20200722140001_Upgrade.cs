@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ApiWeb.Migrations
 {
-    public partial class Cursos : Migration
+    public partial class Upgrade : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,14 +58,67 @@ namespace ApiWeb.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "MatricularCurso",
+                columns: table => new
+                {
+                    MatricularCursoId = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    ValorTotalCurso = table.Column<double>(nullable: false),
+                    QtdPagamentoUsuario = table.Column<int>(nullable: false),
+                    UsuarioId = table.Column<int>(nullable: false),
+                    CartaoId = table.Column<int>(nullable: false),
+                    CursoId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MatricularCurso", x => x.MatricularCursoId);
+                    table.ForeignKey(
+                        name: "FK_MatricularCurso_Cartao_CartaoId",
+                        column: x => x.CartaoId,
+                        principalTable: "Cartao",
+                        principalColumn: "CartaoId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MatricularCurso_Curso_CursoId",
+                        column: x => x.CursoId,
+                        principalTable: "Curso",
+                        principalColumn: "CursoId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MatricularCurso_Usuarios_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuarios",
+                        principalColumn: "UsuarioId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Cartao_UsuarioId",
                 table: "Cartao",
+                column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MatricularCurso_CartaoId",
+                table: "MatricularCurso",
+                column: "CartaoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MatricularCurso_CursoId",
+                table: "MatricularCurso",
+                column: "CursoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MatricularCurso_UsuarioId",
+                table: "MatricularCurso",
                 column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "MatricularCurso");
+
             migrationBuilder.DropTable(
                 name: "Cartao");
 

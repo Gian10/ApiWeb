@@ -21,5 +21,8 @@ namespace ApiWeb
 
         public DbSet<Curso> Curso { get; set; }
 
+        public DbSet<ApiWeb.Models.MatricularCurso> MatricularCurso { get; set; }
+
+
     }
 }

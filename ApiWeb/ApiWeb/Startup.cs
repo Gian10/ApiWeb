@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Http;
 using ApiWeb.Services.UsuarioService;
 using ApiWeb.Services.CartaoService;
 using ApiWeb.Services.CursoService;
+using ApiWeb.Services.MatricularCursoService;
 
 namespace ApiWeb
 {
@@ -55,6 +56,9 @@ namespace ApiWeb
 
             // injetar CursoService
             services.AddScoped<CursoService>();
+
+            // injetar MatricularCursoService
+            services.AddScoped<MatricularCursoService>();
             
 
             // baixar o  Swashbuckle.AspNetCore para usar o swagger
