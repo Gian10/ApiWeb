@@ -515,8 +515,12 @@ C:\Users\giana\source\repos\ApiWeb\ApiTest\bin\Debug\netcoreapp3.1\ApiWeb.pdb
 C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.csprojAssemblyReference.cache
 C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.AssemblyInfoInputs.cache
 C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.AssemblyInfo.cs
-C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.csproj.CoreCompileInputs.cache
 C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.csproj.CopyComplete
 C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.dll
 C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.pdb
 C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.genruntimeconfig.cache
+C:\Users\giana\source\repos\ApiWeb\ApiTest\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\giana\source\repos\ApiWeb\ApiTest\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\giana\source\repos\ApiWeb\ApiTest\bin\Debug\netcoreapp3.1\SendGrid.dll
+C:\Users\giana\source\repos\ApiWeb\ApiTest\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll
+C:\Users\giana\source\repos\ApiWeb\ApiTest\obj\Debug\netcoreapp3.1\ApiTest.csproj.CoreCompileInputs.cache

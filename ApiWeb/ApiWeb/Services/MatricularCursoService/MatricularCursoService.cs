@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApiWeb.Services.MatricularCursoService
 {
+    // CLASSE DE SERVIÇO DE MATRICULAR CURSO LIGADO AO BANCO DE DADOS
     public class MatricularCursoService
     {
 
@@ -21,6 +22,17 @@ namespace ApiWeb.Services.MatricularCursoService
         {
             var listaMatricula = await _context.MatricularCurso.ToListAsync();
             return listaMatricula;
+        }
+
+        public async Task<MatricularCurso> CriarMatriculaCurso(MatricularCurso matricularCurso)
+        {
+            if (matricularCurso.QtdPagamentoUsuario >= 1)
+            {
+                _context.Add(matricularCurso);
+                await _context.SaveChangesAsync();
+                return matricularCurso;
+            }
+            return null;
         }
 
 

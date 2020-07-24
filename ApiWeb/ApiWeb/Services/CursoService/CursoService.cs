@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiWeb.Services.CursoService
 {
+    // CLASSE DE SERVIÇO DE CURSO LIGADO AO BANCO DE DADOS
     public class CursoService
     {
 

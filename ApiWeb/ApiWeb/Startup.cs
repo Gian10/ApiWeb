@@ -20,6 +20,7 @@ using ApiWeb.Services.UsuarioService;
 using ApiWeb.Services.CartaoService;
 using ApiWeb.Services.CursoService;
 using ApiWeb.Services.MatricularCursoService;
+using ApiWeb.Models;
 
 namespace ApiWeb
 {
@@ -35,6 +36,8 @@ namespace ApiWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddDbContext<UsuarioContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("UsuarioContext"), builder =>
             builder.MigrationsAssembly("ApiWeb")));

@@ -162,9 +162,6 @@ C:\Users\giana\source\repos\ApiWeb\ApiWeb\bin\Debug\netcoreapp3.1\runtimes\win\l
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.AssemblyInfoInputs.cache
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.AssemblyInfo.cs
-C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.csproj.CoreCompileInputs.cache
-C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.RazorTargetAssemblyInfo.cache
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.csproj.CopyComplete
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\staticwebassets\ApiWeb.StaticWebAssets.Manifest.cache
@@ -173,3 +170,10 @@ C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.dll
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.pdb
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.genruntimeconfig.cache
 C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.csprojAssemblyReference.cache
+C:\Users\giana\source\repos\ApiWeb\ApiWeb\bin\Debug\netcoreapp3.1\SendGrid.dll
+C:\Users\giana\source\repos\ApiWeb\ApiWeb\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll
+C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.csproj.CoreCompileInputs.cache
+C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\giana\source\repos\ApiWeb\ApiWeb\obj\Debug\netcoreapp3.1\ApiWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\giana\source\repos\ApiWeb\ApiWeb\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\giana\source\repos\ApiWeb\ApiWeb\bin\Debug\netcoreapp3.1\MimeKit.dll
